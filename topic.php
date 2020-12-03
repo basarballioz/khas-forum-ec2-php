@@ -14,22 +14,15 @@ $sql = "SELECT
 
 $result = mysqli_query($conn, $sql);
 
-if(!$result)
-{
+if (!$result) {
     echo 'The topic could not be displayed, please try again later.' . mysqli_error($conn);
-}
-else
-{
-    if(mysqli_num_rows($result) == 0)
-    {
+} else {
+    if (mysqli_num_rows($result) == 0) {
         echo 'This topic does not exist.';
-    }
-    else
-    {
+    } else {
         //display category data
-        while($row = mysqli_fetch_assoc($result))
-        {
-            echo '<h2 class="posts">'.$row['topic_subject'].' </h2>';
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo '<h2 class="posts">' . $row['topic_subject'] . ' </h2>';
         }
 
         //do a query for the posts
@@ -52,18 +45,12 @@ else
 
         $result = mysqli_query($conn, $sql);
 
-        if(!$result)
-        {
+        if (!$result) {
             echo 'The topic could not be displayed, please try again later.';
-        }
-        else
-        {
-            if(mysqli_num_rows($result) == 0)
-            {
+        } else {
+            if (mysqli_num_rows($result) == 0) {
                 echo 'This topic is empty.';
-            }
-            else
-            {
+            } else {
                 //prepare the table
                 echo '<table border="1">
                       <tr>
@@ -71,18 +58,17 @@ else
                         <th>Date and user name</th>
                       </tr>';
 
-                while($row = mysqli_fetch_assoc($result))
-                {
+                while ($row = mysqli_fetch_assoc($result)) {
                     echo '<tr>';
-                        echo '<td class="leftpart">';
-                            echo $row['post_content'];
-                        echo '</td>';
-                        echo '<td class="rightpart">';
-                        echo $row['user_name'];
-                        echo "\n";
-                        echo '<br>';
-                        echo date('d-m-Y H:i:s', strtotime($row['post_date']));
-                        echo '</td>';
+                    echo '<td class="leftpart">';
+                    echo $row['post_content'];
+                    echo '</td>';
+                    echo '<td class="rightpart">';
+                    echo $row['user_name'];
+                    echo "\n";
+                    echo '<br>';
+                    echo date('d-m-Y H:i:s', strtotime($row['post_date']));
+                    echo '</td>';
                     echo '</tr>';
                 }
                 echo '</table>';
@@ -108,4 +94,3 @@ echo '</div>
 </body>
 
 </html>';
-?>
