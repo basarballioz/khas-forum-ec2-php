@@ -144,6 +144,12 @@ textarea {
     top: 1px;
 }
 
+#button1, #button2 {
+    float: left;
+}
+#button1 {
+    margin: 0px 10px 0px 0px;
+}
 .topnav {
     overflow: hidden;
     background-color: #333;
