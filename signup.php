@@ -10,13 +10,13 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     /*the form hasn't been posted yet, display it
       note that the action="" will cause the form to post to the same page it is on */
     echo '<form method="post" action="">
-        Username: <input type="text" name="user_name" /><br>
+        Username: <input type="text" name="user_name" required/><br>
         <br>
-        Password: <input type="password" name="user_pass"><br>
+        Password: <input type="password" name="user_pass" required><br>
         <br>
-        Confirm Password: <input type="password" name="user_pass_check"><br>
+        Confirm Password: <input type="password" name="user_pass_check" required><br>
         <br>
-        E-mail: <input type="email" name="user_email"><br>
+        E-mail: <input type="email" name="user_email" required><br>
         <hr>
         <input class="myButton" type="submit" value="Sign Up" />
      </form>';

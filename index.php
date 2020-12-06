@@ -37,7 +37,7 @@ if (!$result) {
             echo '<h3><a href="category.php?id=' . $row['cat_id'] . '">' . $row['cat_name'] . '</a></h3>' . $row['cat_description'];
             echo '</td>';
             echo '<td class="rightpart">';
-            echo '<h3><a href="topic.php?id=' . $row['topic_id'] . '">' . $row['topic_subject'] . '</a><h3>';;
+            echo '<h3><a href="topic.php?id=' . $row['topic_id'] . '">' . $row['topic_subject'] . '</a></h3>';;
             echo '</td>';
             echo '</tr>';
         }

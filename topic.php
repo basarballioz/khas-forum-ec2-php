@@ -77,7 +77,7 @@ if (!$result) {
 
                 echo '<p class="posts">Give information about this topic</p>
                 <br><form method="post" action="reply.php?' . $_SERVER['QUERY_STRING'] . '">
-                    <textarea name="reply-content" rows="10" cols="50"></textarea><br>
+                    <textarea name="reply-content" rows="10" cols="50" required></textarea><br>
                     <input class="myButton" type="submit" value="Submit"/>
                 </form>';
             }

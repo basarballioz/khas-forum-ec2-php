@@ -13,8 +13,8 @@ if (isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == true) {
         /*the form hasn't been posted yet, display it
           note that the action="" will cause the form to post to the same page it is on */
         echo '<form method="post" action="">
-            Username: <input type="text" name="user_name" /><br>
-            <br>Password: <input type="password" name="user_pass">
+            Username: <input type="text" name="user_name" required/><br>
+            <br>Password: <input type="password" name="user_pass" required>
             <hr>
             <input class="myButton" type="submit" value="Sign in" />
          </form>';

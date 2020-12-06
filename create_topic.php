@@ -32,15 +32,15 @@ if (isset($_SESSION['signed_in']) == false) {
             } else {
                 echo '<h2>CREATE A NEW TOPIC</h2>';
                 echo '<form method="post" action="">
-                    Subject: <input type="text" name="topic_subject" /><br><hr> My Category Is: <br>';
+                    Subject: <input type="text" name="topic_subject" required/><br><hr> My Category Is: <br>';
 
-                echo '<br><select name="topic_cat">';
+                echo '<br><select name="topic_cat" required>';
                 while ($row = mysqli_fetch_assoc($result)) {
                     echo '<option value="' . $row['cat_id'] . '">' . $row['cat_name'] . '</option>';
                 }
                 echo '</select>';
 
-                echo '<hr><br>Message: <textarea name="post_content" /></textarea>
+                echo '<hr><br>Message: <textarea name="post_content" required></textarea>
                 <hr><br><input class="myButton" type="submit" value="Create topic"/>
                  </form>';
             }

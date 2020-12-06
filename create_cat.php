@@ -9,8 +9,8 @@ if (isset($_SESSION['signed_in']) == true) {
         //the form hasn't been posted yet, display it
         echo '<h2>CREATE A NEW CATEGORY</h2>';
         echo "<form method='post' action=''>
-    Category name: <input type='text' name='cat_name' />
-    <br><hr>Category description: <input name='cat_description' /></input>
+    Category name: <input type='text' name='cat_name' required/>
+    <br><hr>Category description: <input name='cat_description' required/></input>
     <br><hr><input class='myButton' type='submit' value='Add category' />
      </form>";
     } else {
