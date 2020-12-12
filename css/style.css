@@ -3,7 +3,7 @@ body {
     background-repeat: no-repeat;
     text-align: center;
     position: relative;
-    background-size: 100%;
+    background-size: cover;
 }
 
 #wrapper {
