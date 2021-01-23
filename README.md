@@ -89,7 +89,4 @@ Everything is ready now. All we have to do is connect to the server with FTP pro
 ## The Distribution Of Tasks: - Project members created a web project by developing a repository on GitHub and writing the SQL codes needed for the project. When doing all this, members of the group used XAMMP, LAMPP, etc. built on their machines. After creating a web application through programs such as this, the project was moved to the Amazon EC2 virtual machine and the platform is now open to anyone.
 
 ### Credits: Başar Ballıöz – 20192305055 Aykut Güler – 20161708006 Şeyma Yıldız – 20172305024
-
-### Source Code: https://github.com/basarballioz/K- Has- Forum Web Adress: http://3.64.64.82/ Technology Stack: HTML5, CSS3, JS, PHP, SQL
-
 ### This project was made for IT321 – Cloud Computing
